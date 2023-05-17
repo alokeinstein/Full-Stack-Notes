@@ -1,0 +1,37 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  .container{
+    user-select: none;
+    position: relative;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+  }
+  #clock{
+    display: flex;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    font-weight: 900;
+    background-color: #474747;
+    font-family: system-ui;
+    font-size: 140px;
+    text-shadow: 2px 2px 10px gray;
+    padding-bottom: 14px;
+    color: white;
+    border-radius: 20px;
+  }
+  #pg{
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    color: white;
+    font-family: system-ui;
+  }
+  

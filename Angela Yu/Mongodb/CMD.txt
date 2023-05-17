@@ -1,0 +1,70 @@
+cd ~ = root directory
+cd directory-name = change directory
+ls = list of the directory
+ls -a = to see the hidden files
+cd .. = goes back into the directory one by one 
+ctrl + A =  takes the cursor at the begining of the command line
+ctrl + E = takes the cursor at the end of the command line
+ctrl + U = deletes the current existing line so you can write new command
+
+touch fileName.txt =  creates a new file
+start fileName.txt =  opens the file
+start Notepad fileName.txt =  specifying the application to open the file
+rm fileName.txt = removes/delete the file from the directory
+pwd  : print working directory
+rm * = deletes every files inside the directory
+rm -r directoryName =  removes the whole directory and the folders inside it
+
+npm init = npm initialistaion
+start directoryName = opens the directory but you have to be in the parent dir to open the child dir
+start file.exe = open file but you have to be in the same dir
+ctrl + C = stop the server and exits the file currently running
+
+//HOW TO OPEN ANY FOLDER IN VS CODE USING COMMAND LINE
+OneDrive/Desktop/Angela Yu/API
+suppose you want to open API in the vs code so you have to come in Angela Yu folder the type:
+code API // APi folder will open in vs code 
+
+
+//GIT,GITHUB,VERSIION CONTROL
+touch chapter.txt
+start chapter.txt
+git init
+git status //se if the file is in the staging area or not 
+git add chapter.txt  //if there is many files like this so this can be tedious `git add .` this command line add every file inside the directory to the staging area
+git commit -m "Completed Chapter"
+git log
+
+MAKE SOME CHANGES IN THE FILE 
+
+git diff chapter.txt//this command will tell you what changes have been done
+git checkout chapter.txt //this will update the file to its original status & you can even bring back the file after being deleted
+
+
+
+
+
+//GITIGNORE
+touch file1.txt secret.txt
+touch .gitignore         //creates a hidden file
+start .gitignore
+git init                 //Initialiising empty git repository
+git add .                //add all files to the staging area
+git status               //check the status of the file
+git rm --cached -r       //Sometimes we dont want to commit all the files in the directory it may contain our secret , so in this stage we have removed files from git staging area
+
+
+/*--In the gitignore file --*/
+open the gitignore file and write the name of the file which you dont want to commit and save the changes and then add all files in the directory using `git add .` and you will see that, those files mentioned in the gitignore file will not be committed.
+# Preprocessors are used for commenting in the .gitignore
+*.txt  //used in gitignore file , it means all the files with the extension of .txt will be ignored and not be comitted
+
+
+
+
+
+
+
+
+alias mongod="/c/Program\ files/MongoDB/Server/4.4/bin/mongod.exe"
+alias mongo="/c/Program\ Files/MongoDB/Server/4.4/bin/mongo.exe"

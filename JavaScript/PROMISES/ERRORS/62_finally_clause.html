@@ -1,0 +1,55 @@
+<html>
+    <head><title>Finally</title></head>
+    <body>
+            <script>
+                                /* JAVASCRIPT CODE  */
+
+//
+/* 
+    try{
+        let a =0
+        console.log(rahul)//reference error
+        console.log("Program ran successfullly")
+    }catch(error){
+        console.log("This is an error")
+        console.log(p)
+    }
+//Finally win run weather try throws error or not , but simple console.log() could do the same shit so what is the benefit of FINALLY??
+//Finally will run even when try and catch both give error, it wont affect FINALLY statements/execution 
+finally{
+    console.log("i will run weather you throw error or not")
+    //close the file
+    //write to the log file
+    //exit the loop 
+}
+ */
+
+
+//finally runs for clean up
+//what happens if there is no error in try and vlaue is returned before the control of program goes into outer code finally will run
+const f = () =>{
+    try{
+        let a =0
+        console.log("Program ran successfully")
+        return
+    }catch(error){
+        console.log("This is an error")
+        console.log(p)
+    }
+
+    finally{
+        console.log("bhai mai chlaunga chahe kuch bhi kar lo")
+    }
+}
+ //calling the function 
+f()
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+or(let i=0; i<=textArray)

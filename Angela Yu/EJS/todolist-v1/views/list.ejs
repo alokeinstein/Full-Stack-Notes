@@ -1,0 +1,24 @@
+<%-include("header")-%><!-- EJS Layout : it is used for those cases in which same bunch of codes and styles 
+are applied everywhere on the webpage such as CSS stylesheet and other links in the head section , this goes
+same for the footer section too where footer is always repeated, this sames time and help to keep the code more
+organised and consistent -->
+
+    <div class="box" id="heading">
+      <h1> <%= listTitle %></h1>
+    </div>
+
+    <div class="box">
+      <% for(let i=0; i<newListItems.length;i++){ %>
+         <div class="item">
+          <input type="checkbox" >
+           <p> <%= newListItems[i] %></p>
+        </div>
+       <%}%>
+        
+       <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="list" value= <%= listTitle %> >+</button>
+       </form>       
+    </div>
+
+<%-include("footer")-%>

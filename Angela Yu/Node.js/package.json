@@ -1,0 +1,16 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "This is a intro to node project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alok Tiwari",
+  "license": "ISC",
+  "dependencies": {
+    "bookquotes": "^1.2.0",
+    "marvel-characters": "^1.0.3",
+    "superheroes": "^3.0.0"
+  }
+}

@@ -1,0 +1,66 @@
+help : this commond in mongo shell will show different commands that can be used and be helpful while making databases
+
+/*--CREATE--*/
+
+//With the help of this commmand you can create a new data table and isert the values ,you can add another value in the same product table using same syntax
+db.products.insertOne({_id:1, name:"Pen", price : 1.20})
+
+//this shows you how many tables you have create to store your data
+show collections
+
+
+
+/*--READ--*/
+
+//it will give you a list of items you have added in your table
+db.products.find()
+
+//with the help of this you can see specific objects in your table
+db.products.find({name:"Pencil"})
+
+//if you have find a certain element with the help of a condition, $gt means greater than
+ db.products.find({price:{$gt:1}})
+
+//It means find the element which have a id of 1 but only return name with it .1 with name means true , means it only wants to return name
+db.products.find({_id:1},{name:1})
+ans: [ { _id: 1, name: 'Pen' } ]
+
+//Now this means return the name of a element which have id 1 but dont return its id
+db.products.find({_id:1},{name:1, _id:0})
+ans:[ { name: 'Pen' } ]
+
+
+
+/*--UPDATE--*/
+//This means where do you want to update and then what do you want to update,and suppose you dont have a stock option then it can create a stock coloumn then update the value accoudingly
+db.products.updateOne({_id:1},{%set:{stock:32}})
+
+
+
+
+/*--DELETE--*/
+//this command will delete the row of includes all ement which have id of 1
+db.products.deleteOne({_id:2})
+
+ 
+
+/*--MONGO DB RELATIONSHIP --*/
+//this shows the relationship between the reviews which hold objects of reviews in an array
+db.products.insert({
+    _id:3,
+    name: "Rubber",
+    price: 5,
+    Stock: 100,
+    reviews: [
+        {
+            authorName  : "Avinash",
+            rating:3,
+            review: "Very Cheap Quality"
+        },
+        {
+            authorName  : "Rohit",
+            rating:5,
+            review: "Quality of rubber is appreciable at this price point"
+        }
+    ]
+})

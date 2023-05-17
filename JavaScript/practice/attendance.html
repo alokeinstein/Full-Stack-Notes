@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Attendance</title>
+  <style>
+    /* Add some style to the webpage using CSS */
+    body {
+      font-family: sans-serif;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    th {
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Attendance</h1>
+  <p>Please mark the students who are present using the checkboxes below:</p>
+  
+  <!-- Create a table to display the list of students -->
+  <table id="student-list">
+    <tr>
+      <th>Name</th>
+      <th>Present</th>
+    </tr>
+    <tr>
+      <td>Alice</td>
+      <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+      <td>Bob</td>
+      <td><input type="checkbox"></td>
+    </tr>
+    <tr>
+      <td>Charlie</td>
+      <td><input type="checkbox"></td>
+    </tr>
+    <!-- Add additional rows for the rest of the students -->
+  </table>
+  
+  <!-- Add a submit button to submit the attendance -->
+  <button onclick="submitAttendance()">Submit Attendance</button>
+  
+  <!-- Add some JavaScript to handle the submit button click event -->
+  <script>
+    function submitAttendance() {
+      // Get a reference to the student list table
+      var studentList = document.getElementById('student-list');
+      
+      // Loop through the rows of the table
+      for (var i = 1; i < studentList.rows.length; i++) {
+        // Get the current row
+        var row = studentList.rows[i];
+        
+        // Get the name and checkbox elements in the row
+        var name = row.cells[0].innerHTML;
+        var checkbox = row.cells[1].firstChild;
+        
+        // Check if the checkbox is checked
+        if (checkbox.checked) {
+          // If the checkbox is checked, log the name to the console
+          console.log(name + ' is present');
+        } else {
+          // If the checkbox is not checked, log the name to the console
+          console.log(name + ' is absent');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

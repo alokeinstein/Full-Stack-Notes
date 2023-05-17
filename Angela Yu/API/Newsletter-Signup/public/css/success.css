@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    background-color: darkgray;
+}
+h1{
+    margin: 10vh 5vh;
+    font-size: 10vh;
+}
+h2{
+    margin-top: 20vh;
+    font-size: 5vh;
+}
+p{
+    font-size: 3vh;
+}

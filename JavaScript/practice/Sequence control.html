@@ -1,0 +1,32 @@
+<!--Sequence Control
+Sometimes you would like to have better control over when to execute a function.
+
+Suppose you want to do a calculation, and then display the result.
+
+You could call a calculator function (addNum), save the result, 
+and then call another function (display) to display the result: 
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1> adding two number </h1>
+<p id="demo"></p>
+<script>
+
+function display(some){
+        document.getElementById("demo").innerHTML = some;
+        }
+
+function addNum(num1,num2){
+    return num1+num2;
+    }
+    
+let result = addNum(5,5);
+display(result);
+  
+</script>
+
+</body>
+</html>
